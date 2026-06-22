@@ -1,8 +1,8 @@
 # Flashcards
 
-A Django app for studying anatomy and physiology through flashcard-style review, organized by body system.
+Studying anatomy and physiology is a lot of memorization. Building a flashcard app for it instead of using Anki because I wanted the practice and I wanted it organized the way I think about it, by body system.
 
-**Status:** In progress. Project scaffolded, apps created, no models or views implemented yet.
+**Status:** In progress. Project and apps scaffolded, models and views not implemented yet.
 
 ---
 
@@ -15,10 +15,10 @@ A Django app for studying anatomy and physiology through flashcard-style review,
 
 ## Structure
 
-Each body system is its own Django app:
+Each body system gets its own Django app:
 
-- `circulatory` — circulatory system cards (app created, models and views empty)
-- `heart` — heart-specific cards (app created, models and views empty)
+- `circulatory` — circulatory system cards (scaffolded, models and views empty)
+- `heart` — heart-specific cards (scaffolded, models and views empty)
 
 ---
 
@@ -44,4 +44,4 @@ python manage.py runserver
 
 ## What I Learned / Key Decisions
 
-**One app per body system.** Keeping each system in its own Django app means adding a new system is just scaffolding a new app — no existing code changes. The tradeoff is that shared flashcard logic (if any) needs to live somewhere central rather than in each app.
+**One app per body system.** Adding a new system is just scaffolding a new app with no existing code touched. If shared flashcard logic becomes necessary it needs a central home, but that's a problem for when there's actually shared logic to share.
